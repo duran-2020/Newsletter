@@ -37,7 +37,7 @@ app.post("/", (req, res) => {
 
   const options = {
     method: "POST",
-    auth: "daniel1:a6f57008b469039db117b6a31d02c4d40-us14"
+    auth: "daniel1:a6f57008b469039db17b6a31d02c4d40-us14"
   }
 
   const request = https.request(url, options, (response) => {
@@ -59,6 +59,10 @@ app.post("/", (req, res) => {
 });
 
 app.post("/failure", (req, res) => {
+  res.redirect("/");
+})
+
+app.post("/success", (req, res) => {
   res.redirect("/");
 })
 
